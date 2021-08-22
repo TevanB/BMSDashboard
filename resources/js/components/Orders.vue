@@ -52,7 +52,7 @@
           </div>
           <!-- /.card-body -->
           <div class="card-footer">
-            <pagination :data="orders" :limit=-1 @pagination-change-page="getResults"></pagination>
+            <pagination :data="orders" :limit=10 @pagination-change-page="getResults"></pagination>
           </div>
         </div>
         <!-- /.card -->
@@ -185,7 +185,7 @@
             }
             let result2 = result.reverse();
             //console.log(result);
-            //console.log(result2);
+            console.log(result2);
             return result2;
           }
 
