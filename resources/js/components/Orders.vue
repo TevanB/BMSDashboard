@@ -22,7 +22,7 @@
                   <th>Order Type</th>
                   <th>Order Price</th>
                   <div v-if="$gate.isAdmin()">
-                  <th>Company Cut</th>
+                  <th>Org Cut</th>
                   </div>
                   <th>Order Message</th>
                   <th>Order Date</th>
