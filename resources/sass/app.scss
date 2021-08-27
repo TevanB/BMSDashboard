@@ -2,26 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-
-@import 'bd-wizard';
+@import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-@import '~admin-lte/dist/css/adminlte.css';
-
-//@import '~admin-lte/plugins/fontawesome-free/css/all.css';
-
-@import 'variables';
-
-//Other css
-
-
-
-.router-link-active{
-    background-color: #3f51b5;
-    color: #fff;
-}
-.router-link-exact-active{
-    background-color: #3f51b5;
-    color: #fff;
-}

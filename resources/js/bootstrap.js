@@ -1,7 +1,3 @@
-//require('dotenv').config();
-
-
-
 window._ = require('lodash');
 
 /**
@@ -15,8 +11,6 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
-    require('admin-lte');
-
 } catch (e) {}
 
 /**
@@ -35,14 +29,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * allows your team to easily build robust real-time web applications.
  */
 
- import Echo from 'laravel-echo';
+// import Echo from 'laravel-echo';
 
- window.Pusher = require('pusher-js');
-//change to env below
- window.Echo = new Echo({
-     broadcaster: 'pusher',
-     namespace: null,
-     key: process.env.MIX_PUSHER_APP_KEY,
-     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-     forceTLS: true
- });
+// window.Pusher = require('pusher-js');
+
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     forceTLS: true
+// });
