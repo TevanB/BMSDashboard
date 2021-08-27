@@ -55,6 +55,7 @@ class OrderController extends Controller
         $orders = DB::table('orders')->get();
         $result = array();
         foreach($orders as $order){
+          if($order->order_status == "unclaimed"){
           $tempOrder = $order;
           $decoder = json_decode($tempOrder->order_message);
           $decoder->email = '';
@@ -64,6 +65,7 @@ class OrderController extends Controller
           $decoder->summoner_name = '';
           $tempOrder->order_message = json_encode($decoder);
           array_push($result, $tempOrder);
+          }
         }
         return json_encode($result);
         //return Order::latest()->paginate(4);

@@ -6,7 +6,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Orders</h3>
+            <h3 class="card-title">Order List</h3>
             <div class="card-tools">
             <button class="btn btn-success" @click="newModal" v-if="$gate.isAdmin()">Add New
             <i class="fas fa-cart-plus"></i>
@@ -22,7 +22,7 @@
                   <th>Order Type</th>
                   <th>Order Price</th>
                   <div v-if="$gate.isAdmin()">
-                  <th>Company Cut</th>
+                  <th>Org Cut</th>
                   </div>
                   <th>Order Message</th>
                   <th>Order Date</th>
@@ -52,7 +52,7 @@
           </div>
           <!-- /.card-body -->
           <div class="card-footer">
-            <pagination :data="orders" :limit=-1 @pagination-change-page="getResults"></pagination>
+            <pagination :data="orders" :limit=10 @pagination-change-page="getResults"></pagination>
           </div>
         </div>
         <!-- /.card -->
@@ -185,7 +185,7 @@
             }
             let result2 = result.reverse();
             //console.log(result);
-            //console.log(result2);
+            console.log(result2);
             return result2;
           }
 
