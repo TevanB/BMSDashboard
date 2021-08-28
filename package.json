@@ -9,7 +9,7 @@
         "prod": "npm run production",
         "start": "node node/server.js",
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build resources/js/app.js --dest public",
+        "build": "vue-cli-service build /resources/js/app.js",
         "heroku-postbuild": [
             "npm run prod",
             "npm run build",
@@ -35,7 +35,7 @@
         "json-loader": "^0.5.7",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.13",
-        "node-sass": "^4.14.1",
+        "node-sass": "4.12",
         "popper.js": "^1.12",
         "request": "latest",
         "resolve-url-loader": "^2.3.1",
@@ -86,5 +86,12 @@
         "vuetable-2": "^2.0.0-beta.4",
         "vuex": "^3.3.0",
         "ws": "^7.3.0"
+    },
+    "vue": {
+        "pages": {
+            "index": {
+                "entry": "resources/js/app.js"
+            }
+        }
     }
 }
