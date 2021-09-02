@@ -35,11 +35,7 @@ let WebpackConfig = require('../src/builder/WebpackConfig');
 module.exports = {
   port: process.env.PORT,
   mode: 'production',
-  entry: {
-    app: [
-     './resources/js/app.js'
-    ]
-  }
+  entry: 'index',
   output: {
      path: path.join(__dirname, 'scripts'),
      filename: 'bundle.js'
